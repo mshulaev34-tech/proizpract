@@ -10,6 +10,8 @@ namespace proizpract
     {
         static void Main(string[] args)
         {
+            menu.MenuRunner MR = new menu.MenuRunner();
+            MR.Run();
         }
     }
 }
