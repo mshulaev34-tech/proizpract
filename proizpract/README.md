@@ -18,7 +18,7 @@
    ```
 
 2. **Открыть решение**
-   - Visual Studio: открыть `IndustryLearnShip.sln`
+   - Visual Studio: открыть `proizpract.sln`
 
 3. **Запустить приложение**
    ```bash
