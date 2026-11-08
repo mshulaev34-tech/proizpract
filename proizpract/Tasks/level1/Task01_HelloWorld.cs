@@ -14,14 +14,15 @@ namespace proizpract.Tasks.level1
 
         public string Description => "**Что сделать:**вывести приветствие и текущую дату.";
 
-        public string[] Requirements => new[] { "ИспользоватьConsole.WriteLine.\r\nДату получить черезDateTime.Now, отформатировать какdd.MM.yyyy.\r\nВывести две строки: приветствие и дату." };
+        public string[] Requirements => new[] {"\tИспользоватьConsole.WriteLine.",
+            "\tДату получить черезDateTime.Now",
+            "\tотформатировать какdd.MM.yyyy.",
+            "\tВывести две строки: приветствие и дату." };
 
         public void Run()
         {
-            
                 Console.WriteLine("Hello World!");
                 Console.WriteLine(DateTime.Now.ToString("dd.MM.yyyy"));
-           
         }
     }
 }
