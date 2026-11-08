@@ -52,6 +52,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\level1\Task01_HelloWorld.cs" />
     <Compile Include="Tasks\level1\Task02_Primitives.cs" />
+    <Compile Include="Tasks\level1\Task03_Calculator.cs" />
+    <Compile Include="Tasks\level1\Task04_ChetnoeChislo.cs" />
+    <Compile Include="Tasks\level1\Task05_TablicaYmnojenia10x10.cs" />
+    <Compile Include="Tasks\level1\Task06_SummaChiselChisla.cs" />
+    <Compile Include="Tasks\level1\Task07_ReversStroki.cs" />
+    <Compile Include="Tasks\level1\Task08_FizzBuzz.cs" />
+    <Compile Include="Tasks\level1\Task09_Array.cs" />
+    <Compile Include="Tasks\level1\Task10_BubbleSort.cs" />
+    <Compile Include="Tasks\level1\Task11_DioganalMatrix.cs" />
+    <Compile Include="Tasks\level1\Task12_Palindrom.cs" />
+    <Compile Include="Tasks\level1\Task13_WordCounter.cs" />
+    <Compile Include="Tasks\level1\Task14_AgeCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
