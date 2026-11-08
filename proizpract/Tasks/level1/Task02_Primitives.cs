@@ -10,11 +10,11 @@ namespace proizpract.Tasks.level1
     [Common.TaskInfoAttribute("Level-1")]
     internal class Task02_Primitives : ITask
     {
-        public string Title => "Primitives";
+        public string Title => "\tPrimitives";
 
-        public string Description => "**Что сделать:**объявить переменные всех примитивных типов и вывести их значения и типы.";
+        public string Description => "\t**Что сделать:**объявить переменные всех примитивных типов и вывести их значения и типы.";
 
-        public string[] Requirements => new[] {"Для каждой переменной вывести значение иGetType().Name.\r\ndecimal— с суффиксомm,float— сf."};
+        public string[] Requirements => new[] {"\tДля каждой переменной вывести значение иGetType().Name.\r\ndecimal— с суффиксомm,float— сf."};
 
         public void Run()
         {
