@@ -67,7 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tasks\level2\" />
