@@ -5,38 +5,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace proizpract.menu
+namespace proizpract.Menu
 {
     internal class LevelMenu
     {
         public List<Common.ITask> Tasks = new List<Common.ITask>();
-        private string LevelName = "NULL";
-        public LevelMenu(string Name)
+         private string LevelName = "NULL";
+        private string LevelDescription = "NULL";
+        public LevelMenu(string Name) 
         {
             LevelName = Name;
+            switch (LevelName)
+            {
+                case "Level-1":
+                    LevelDescription = "Уровень 1: Базовый (задания 1–15)";
+                    break;
+                case "Level-2":
+                    LevelDescription = "Уровень 2 — Средний (задания 16–35)";
+                    break;
+                default:
+                    LevelDescription = "Неизвестный уровень";
+                    break;
+            }
             MenuRunner._instance.ArrayLevels.Add(this);
         }
-        public void Show()
+        /// <summary>
+        /// Showing level Menu 
+        /// </summary>
+        public void Show() 
         {
-            while (true)
+            while (true) 
             {
-                Console.WriteLine("SELECT INDEX LEVEL");
-                for (int i = 0; i < Tasks.Count; i++)
+                
+                Console.WriteLine($"--- {LevelDescription} ---");
+                for (int i = 0; i < Tasks.Count; i++) 
                 {
                     ITask task = Tasks[i];
                     Console.WriteLine($"{i} : {task.Title}");
                 }
+                Console.WriteLine("Выберите задание (q- для выхода):");
+                
                 int TaskIndex = WriteIndexTask();
                 //print TAsk info
-                Console.WriteLine($"{TaskIndex} : {Tasks[TaskIndex].Title}");
-                Console.WriteLine($" Description: \n{Tasks[TaskIndex].Description}");
-                Console.WriteLine(" Requirements:");
-                foreach (string requir in Tasks[TaskIndex].Requirements)
-                {
-                    Console.WriteLine($"\t{requir}");
+                Console.WriteLine($"\n -----Задание : {Tasks[TaskIndex].Title}------");
+                Console.WriteLine($"Описание: \n{Tasks[TaskIndex].Description}");
+                Console.WriteLine("Требования:");
+                foreach (string requir in Tasks[TaskIndex].Requirements) 
+                {  
+                    Console.WriteLine($"\t - {requir}");    
                 }
-                Console.WriteLine("RUN EXUCUTION...\n");
+                Console.WriteLine("[запуск решения]...\n");
                 Tasks[TaskIndex].Run();
+                Console.WriteLine("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             }
 
         }
@@ -44,9 +64,9 @@ namespace proizpract.menu
         {
             string read = Console.ReadLine();
             int NumTask = -1;
-            if (read == "q")
+            if (read == "q" )
             {
-                Console.WriteLine("Exit main menu...\n");
+                Console.WriteLine("Выход вглавное меню...\n");
                 MenuRunner._instance.Run();
             }
             try
@@ -59,14 +79,15 @@ namespace proizpract.menu
             }
             catch { }
 
-            Console.WriteLine("None Valid Task Index  , Write Correct  Task index Again");
+            Console.WriteLine("не коректный индекс , введите индекс повторно:");
             return WriteIndexTask();
 
         }
-        public string GetName()
+        public string GetName() 
         {
             return LevelName;
         }
-
+        
     }
+    
 }

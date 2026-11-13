@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace proizpract.Tasks.level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1",13)]
     internal class Task13_WordCounter
     {
         public string Title => "Счётчик вхождений слов в тексте";

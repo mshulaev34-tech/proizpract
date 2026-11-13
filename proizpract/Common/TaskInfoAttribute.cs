@@ -10,9 +10,11 @@ namespace proizpract.Common
     public class TaskInfoAttribute : Attribute
     {
         public string LevelName { get; }
-        public TaskInfoAttribute(string levelName)
+        public int Order { get; }
+        public TaskInfoAttribute(string levelName, int order)
         {
             LevelName = levelName;
+            Order = order;
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace proizpract.Tasks.level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1",10)]
     internal class Task10_BubbleSort
     {
         public string Title => "Сортировка пузырьком + вставками";

@@ -1,16 +1,16 @@
 ﻿using proizpract.Common;
-using proizpract.Tasks.level1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace proizpract.menu
+namespace proizpract.Menu
 {
     /// <summary>
-    /// 
+    /// Main menu and runner all menu
     /// </summary>
     internal class MenuRunner
     {
@@ -33,10 +33,12 @@ namespace proizpract.menu
             InitTask();
             IsInit = true;
 
+            Console.WriteLine("=== Практикум по C# ===");
             for (int i = 0; i < ArrayLevels.Count; i++)
             {
                 Console.WriteLine($"{i} : {ArrayLevels[i].GetName()}");
             }
+            Console.WriteLine("Выберите Меню (q- для выхода):");
             int index = WriteIndexMenu();
             ArrayLevels[index].Show();
         }
@@ -48,9 +50,10 @@ namespace proizpract.menu
         {
             string read = Console.ReadLine();
             int NumTask = -1;
+
             if (read == "q")
             {
-                Console.WriteLine("Close Programm");
+                Console.WriteLine("Закрытие программы...");
                 Environment.Exit(0);
             }
             try
@@ -63,7 +66,7 @@ namespace proizpract.menu
             }
             catch { }
 
-            Console.WriteLine("None Valid Index , Write Correct index Again");
+            Console.WriteLine("Не коректный индекс , введите индекс повторно:");
             return WriteIndexMenu();
         }
         /// <summary>
@@ -74,8 +77,12 @@ namespace proizpract.menu
             if (IsInit) return;
             new LevelMenu("Level-1");
             new LevelMenu("Level-2");
-            //new LevelMenu("Level-3");
         }
+        /// <summary>
+        /// Add task in level by name
+        /// </summary>
+        /// <param name="name">level name to which conncect task</param>
+        /// <param name="task">class who exuteting</param>
         public void AddOnLevelByName(string name, ITask task)
         {
             foreach (LevelMenu level in ArrayLevels)
@@ -87,12 +94,21 @@ namespace proizpract.menu
                 }
             }
         }
+        /// <summary>
+        /// get all class with TaskInfoAttribure and link with level menu
+        /// </summary>
         private void InitTask()
         {
             if (IsInit) return;
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var allTypes = assembly.GetTypes();
-            var TaskTypes = allTypes.Where(Type => Type.GetCustomAttribute<Common.TaskInfoAttribute>() != null);
+            var TaskTypes = allTypes.Where(t => t.GetCustomAttribute<Common.TaskInfoAttribute>() != null)
+                                    .OrderBy(t =>
+                                    {
+                                        var attr = t.GetCustomAttribute<Common.TaskInfoAttribute>();
+                                        return attr?.Order ?? 0;
+                                    })
+                                    .ToList();
 
             foreach (var type in TaskTypes)
             {
