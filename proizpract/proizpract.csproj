@@ -96,13 +96,22 @@
     <Compile Include="Tasks\level2\Task32_Temperature.cs" />
     <Compile Include="Tasks\level2\Task33_LinqEmployees.cs" />
     <Compile Include="Tasks\level2\Task34_LinqWordGrouping.cs" />
+    <Compile Include="Tasks\level3\Task36_FindDuplicates.cs" />
+    <Compile Include="Tasks\level3\Task37_FibonacciMemoization.cs" />
+    <Compile Include="Tasks\level3\Task38_CollectionsBenchmark.cs" />
+    <Compile Include="Tasks\level3\Task39_YieldReturn.cs" />
+    <Compile Include="Tasks\level3\Task40_AsyncDownload.cs" />
+    <Compile Include="Tasks\level3\Task41_TaskWhenAll.cs" />
+    <Compile Include="Tasks\level3\Task42_CancellationToken.cs" />
+    <Compile Include="Tasks\level3\Task43_MultipleExceptions.cs" />
+    <Compile Include="Tasks\level3\Task44_TodoList.cs" />
+    <Compile Include="Tasks\level3\Task45_Library.cs" />
+    <Compile Include="Tasks\level3\Task50_Bisect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="README.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tasks\level3\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
