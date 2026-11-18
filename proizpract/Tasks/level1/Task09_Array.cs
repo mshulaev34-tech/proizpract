@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proizpract.Tasks.level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1",9)]
     internal class Task09_Array
     {
         public string Title => " Массивы: min/max/sum/avg";

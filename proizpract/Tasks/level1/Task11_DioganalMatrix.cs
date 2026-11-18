@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proizpract.Tasks.level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1",11)]
     internal class Task11_DioganalMatrix
     {
         public string Title => "Диагональ матрицы N×N";

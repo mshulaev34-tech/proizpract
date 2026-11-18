@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace proizpract.Tasks.level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1",5)]
     internal class Task05_TablicaYmnojenia10x10 : ITask
     {
         public string Title => "TablicaYmnojenia10x10";
