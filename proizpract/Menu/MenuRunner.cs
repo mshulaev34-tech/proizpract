@@ -77,6 +77,7 @@ namespace proizpract.Menu
             if (IsInit) return;
             new LevelMenu("Level-1");
             new LevelMenu("Level-2");
+            new LevelMenu("Level-3")
         }
         /// <summary>
         /// Add task in level by name
