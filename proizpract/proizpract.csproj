@@ -107,6 +107,7 @@
     <Compile Include="Tasks\level3\Task44_TodoList.cs" />
     <Compile Include="Tasks\level3\Task45_Library.cs" />
     <Compile Include="Tasks\level3\Task50_Bisect.cs" />
+    <Compile Include="Tests\LibraryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
