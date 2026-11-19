@@ -136,7 +136,6 @@ namespace proizpract.Tests
             var reader = new Reader("Иван");
             lib.AddBook(book);
             lib.AddReader(reader);
-
             lib.IssueBook("Война и мир", "Иван");
             lib.ReturnBook("Война и мир", "Иван");
 
