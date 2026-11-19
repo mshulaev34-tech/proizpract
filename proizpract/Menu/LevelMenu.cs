@@ -24,7 +24,7 @@ namespace proizpract.Menu
                     LevelDescription = "Уровень 2 — Средний (задания 16–35)";
                     break;
                 default:
-                    LevelDescription = "Неизвестный уровень";
+                    LevelDescription = "Уровень 2 — Средний (задания 36–50";
                     break;
             }
             MenuRunner._instance.ArrayLevels.Add(this);
