@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proizpract.Tasks.level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1",12)]
     internal class Task12_Palindrom
     {
         public string Title => "Палиндром";

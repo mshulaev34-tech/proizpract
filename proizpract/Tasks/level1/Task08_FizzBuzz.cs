@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proizpract.Tasks.level1
 {
-    [Common.TaskInfoAttribute("Level-1")]
+    [Common.TaskInfoAttribute("Level-1",8)]
     internal class Task08_FizzBuzz
     {
         public string Title => "FizzBuzz";

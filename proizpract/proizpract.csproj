@@ -46,8 +46,21 @@
     <Compile Include="Common\ConsoleHelper.cs" />
     <Compile Include="Common\ITask.cs" />
     <Compile Include="Common\TaskInfoAttribute.cs" />
+    <Compile Include="Enums\CustomDayOfWeek.cs" />
+    <Compile Include="Enums\NotificationType.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\CustomArray.cs" />
     <Compile Include="Menu\LevelMenu.cs" />
     <Compile Include="Menu\MenuRunner.cs" />
+    <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\BankAccount.cs.cs" />
+    <Compile Include="Models\Discount.cs.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Notification.cs.cs" />
+    <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\Shape.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Temperature.cs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\level1\Task01_HelloWorld.cs" />
@@ -64,13 +77,31 @@
     <Compile Include="Tasks\level1\Task12_Palindrom.cs" />
     <Compile Include="Tasks\level1\Task13_WordCounter.cs" />
     <Compile Include="Tasks\level1\Task14_AgeCalculator.cs" />
+    <Compile Include="Tasks\level2\Task16_StringExtensions.cs" />
+    <Compile Include="Tasks\level2\Task17_StringBuilderBenchmark.cs" />
+    <Compile Include="Tasks\level2\Task18_ParseComparison.cs" />
+    <Compile Include="Tasks\level2\Task19_CustomCollections.cs" />
+    <Compile Include="Tasks\level2\Task20_Generics.cs" />
+    <Compile Include="Tasks\level2\Task21_DayOfWeekEnum.cs" />
+    <Compile Include="Tasks\level2\Task22_ParamsSum.cs" />
+    <Compile Include="Tasks\level2\Task23_Nullable.cs" />
+    <Compile Include="Tasks\level2\Task24_AnimalHierarchy.cs" />
+    <Compile Include="Tasks\level2\Task25_ShapeSorting.cs" />
+    <Compile Include="Tasks\level2\Task26_DiscountStrategy.cs" />
+    <Compile Include="Tasks\level2\Task27_StudentSorting.cs" />
+    <Compile Include="Tasks\level2\Task28_PointEquality.cs" />
+    <Compile Include="Tasks\level2\Task29_NotificationFactory.cs" />
+    <Compile Include="Tasks\level2\Task30_BankAccount.cs" />
+    <Compile Include="Tasks\level2\Task31_DisposableFileWriter.cs" />
+    <Compile Include="Tasks\level2\Task32_Temperature.cs" />
+    <Compile Include="Tasks\level2\Task33_LinqEmployees.cs" />
+    <Compile Include="Tasks\level2\Task34_LinqWordGrouping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Tasks\level2\" />
     <Folder Include="Tasks\level3\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
